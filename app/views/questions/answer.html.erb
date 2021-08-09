@@ -1,0 +1,28 @@
+<% anwser = "" %>
+<% if @phrase == "I am going to work" %>
+<%  anwser = "GREAT !"%>
+<% elsif @phrase.end_with?("?") %>
+<% anwser = "Silly question, get dressed and go to work!" %>
+<% else anwser = "I don't care, get dressed and go to work!" %>
+<% end %>
+
+<div>
+
+    <div class="banner">
+        <div class ="txt-contener">
+            <p><%= @phrase %></p>
+            <p>- You</p>
+        </div>
+        
+    </div>
+    <div class="banner">
+        <div class ="txt-contener">
+            <p><%= anwser %></p>
+            <p>- Your Coach</p>
+        </div>
+        
+    </div>
+
+    <%= link_to "ask womething else",ask_path %>
+
+</div>
